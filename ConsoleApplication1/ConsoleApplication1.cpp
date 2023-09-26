@@ -1,32 +1,30 @@
-#include <cstdlib>
 #include <iostream>
-#define maxf3
-#define maxc5
+#include <cstdlib>
+
+#define maxf 3
+#define maxc 5
 
 using namespace std;
 
-int main(int argc, char* argv[])
-{
-	float a[maxf][maxc];
-	int f, c;
-	//leer el array
-	for (f = 0; f < maxf; f++) {
+int main(int argc, char* argv[]) {
 
-		for (c = 0; c < maxc; c++) {
+    float a[maxf][maxc];
 
-			cin >> a[f][c];
+    for (int f = 0; f < maxf; f++) {
+        for (int c = 0; c < maxc; c++) {
+            cout << "Introduce un valor para a[" << f << "][" << c << "]: ";
+            cin >> a[f][c];
+        }
+    }
 
-		}
-	}
-	//escribir el array
-	for (f = 0; f < maxf; f++)
-	{
-		for (c = 0; c < maxc; c++) {
-			cout << a[f][c];
-			cout << endl;
-		}	
-		
-	}
-	system("PAUSE");
-	return EXIT_SUCCES;
+    cout << "La matriz ingresada es:" << endl;
+
+    for (int f = 0; f < maxf; f++) {
+        for (int c = 0; c < maxc; c++)
+            cout << a[f][c] << " ";
+        cout << endl;
+    }
+
+    system("PAUSE");
+    return EXIT_SUCCESS;
 }
